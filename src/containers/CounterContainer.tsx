@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import Counter from "../components/Counter";
+import CounterPresenter from "../components/CounterPresenter";
 
 import { RootState } from "../modules";
 import { decrease, increase, increaseBy } from "../modules/counter";
@@ -22,7 +22,7 @@ function CounterContainer() {
   };
 
   return (
-    <Counter
+    <CounterPresenter
       count={count}
       onIncrease={onIcrease}
       onDecrease={onDecrease}

@@ -1,7 +1,12 @@
-import useCounter from "../hooks/useCounter";
+type CounterProps = {
+  count: number;
+  onIncrease: () => void;
+  onDecrease: () => void;
+  onIncreaseBy: (diff: number) => void;
+};
 
-function Counter() {
-  const { count, onIncrease, onDecrease, onIncreaseBy } = useCounter();
+function Counter(props: CounterProps) {
+  const { count, onIncrease, onDecrease, onIncreaseBy } = props;
   return (
     <div>
       <h1>{count}</h1>
